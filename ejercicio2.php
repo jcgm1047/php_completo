@@ -1,7 +1,10 @@
 <?php 
-//recibir informacion del fornulario html metodo post
-$nombre = $_POST['txtNombre'];
+if ($_POST) {
+    $nombre = $_POST['txtNombre'];
 echo "este es el dato enviado por post: " . $nombre;
+}
+//recibir informacion del fornulario html metodo post
+
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +17,7 @@ echo "este es el dato enviado por post: " . $nombre;
 </head>
 <body>
     
-<h1>Hola mundo</h1>
+
 
 
 <form action="ejercicio2.php" method="post">
