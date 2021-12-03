@@ -2,9 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>operadores logicos
-        
-    </title>
+    <title>operadores aritmeticos</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,12 +15,12 @@
 <body>
 
 
-    <form action="ejercicio10.php" method="post">
-        Valor a
+    <form action="ejercicio12.php" method="post">
+        Valor 1
         <br>
         <input type="text" name="valorA" id="">
         <br>
-        Valor b
+        Valor 2
         <br>
         <input type="text" name="valorB" id="">
         <br>
@@ -34,11 +32,10 @@
 
         $ValorA = $_POST["valorA"];
         $ValorB = $_POST["valorB"];
-
-        if (($ValorA != $ValorB)&&($ValorA = 5)) {
-            echo "cumple con la condicio";
+        if ($ValorA > $ValorB) {
+            echo $ValorA . " Es mayor que " . $ValorB;
         } else
-            echo  " no cumple con la condicion";
+            echo  $ValorB . " Es mayor que " . $ValorA;
     }
 
     ?>

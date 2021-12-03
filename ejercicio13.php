@@ -2,9 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>operadores logicos
-        
-    </title>
+    <title>Title</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,43 +14,46 @@
 
 <body>
 
+    <form action="ejercicio13.php" method="post">
 
-    <form action="ejercicio10.php" method="post">
-        Valor a
+        <input type="submit" name="btnValor" value="1">
         <br>
-        <input type="text" name="valorA" id="">
+        <input type="submit" name="btnValor" value="2">
         <br>
-        Valor b
-        <br>
-        <input type="text" name="valorB" id="">
-        <br>
-        <input type="submit" value="Calcular">
+        <input type="submit" name="btnValor" value="3">
+
+
+
+
     </form>
 
+
     <?php
+
+
+
     if ($_POST) {
 
-        $ValorA = $_POST["valorA"];
-        $ValorB = $_POST["valorB"];
+        $boton = $_POST['btnValor'];
 
-        if (($ValorA != $ValorB)&&($ValorA = 5)) {
-            echo "cumple con la condicio";
-        } else
-            echo  " no cumple con la condicion";
+        switch ($boton) {
+            case 1:
+                echo "Preciono el boton1";
+                break;
+            case 2:
+                echo "Preciono el boton2";
+                break;
+            case 3:
+                echo "Preciono el boton3";
+                break;
+            default:
+                echo "No ha precionado ningun boton";
+                break;
+        }
     }
 
+
     ?>
-
-
-
-
-
-
-
-
-
-
-
 
 
 

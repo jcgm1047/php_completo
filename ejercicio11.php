@@ -2,9 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>operadores logicos
-        
-    </title>
+    <title>operadores aritmeticos</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,12 +15,12 @@
 <body>
 
 
-    <form action="ejercicio10.php" method="post">
-        Valor a
+    <form action="ejercicio11.php" method="post">
+        Valor A
         <br>
         <input type="text" name="valorA" id="">
         <br>
-        Valor b
+        Valor B
         <br>
         <input type="text" name="valorB" id="">
         <br>
@@ -32,19 +30,33 @@
     <?php
     if ($_POST) {
 
-        $ValorA = $_POST["valorA"];
-        $ValorB = $_POST["valorB"];
+        $valorA = $_POST["valorA"];
+        $valorB = $_POST["valorB"];
 
-        if (($ValorA != $ValorB)&&($ValorA = 5)) {
-            echo "cumple con la condicio";
-        } else
-            echo  " no cumple con la condicion";
+      
+        $suma = $valorA + $valorB;
+        
+        $resta = $valorA - $valorB;
+       
+        $division = $valorA / $valorB;
+       
+        $mulitplicacion = $valorA * $valorB;
+        echo "<br/>" . $suma;
+        echo "<br/>" . $resta;
+        echo "<br/>" . $division;
+        echo "<br/>" . $mulitplicacion;
+
+if ($valorA == $valorB) {
+    echo "<br/>". "Ambos valores son iguales";
+
+}else {
+    echo "<br/>"."los valores no son iguales";
+}
+
+    
     }
 
     ?>
-
-
-
 
 
 
