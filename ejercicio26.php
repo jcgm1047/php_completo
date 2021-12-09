@@ -21,15 +21,4 @@ public function mostrarEdad(){
 
 $objAlumno= new persona();
 $objAlumno->asignarnombre("le bebe");
-
-$objAlumno2 = new persona();
-$objAlumno2 ->asignarnombre("camilo");
-
-echo $objAlumno2 ->mostrarEdad();
-$objAlumno ->imprimirnombre();
-$objAlumno2 ->imprimirnombre();
-
-
-
-
- ?>
+$objAlumno->imprimirnombre();
