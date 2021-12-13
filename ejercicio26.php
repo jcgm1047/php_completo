@@ -6,6 +6,14 @@ public $nombre;
 private $edad;
 protected $altura;
 
+function __construct($nuevoNombre)
+{
+    $this->nombre=$nuevoNombre;
+
+
+
+}
+
 public function asignarnombre($nuevoNombre){
     $this ->nombre=$nuevoNombre;
 }
@@ -19,6 +27,6 @@ public function mostrarEdad(){
 
 }
 
-$objAlumno= new persona();
-$objAlumno->asignarnombre("le bebe");
+$objAlumno= new persona("le bebe-");
+/* $objAlumno->asignarnombre("le bebe"); */
 $objAlumno->imprimirnombre();
