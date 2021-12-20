@@ -48,9 +48,9 @@ if ($_POST) {
         <br>css <input type="radio" <?php echo ($rdglenguaje == "css") ? "checked" : ""; ?> name="Lenguaje" value="css" id=""><br />
 
         Estas aprendiendo...
-        <br />PHP<input type="checkbox" <?php $chkphp ?> name="chkphp" value="si" id="">
-        <br />HTML<input type="checkbox" <?php $chkhtml ?> name="chkhtml" value="si" id="">
-        <br />CSS<input type="checkbox" <?php $chkcss ?> name="chkcss" value="si" id="">
+        <br />PHP<input type="checkbox"  <?php echo $chkphp; ?> name="chkphp" value="si" id="">
+        <br />HTML<input type="checkbox" <?php echo $chkhtml; ?> name="chkhtml" value="si" id="">
+        <br />CSS<input type="checkbox" <?php echo $chkcss; ?> name="chkcss" value="si" id="">
 
         <br /><strong>Tu lenguaje favorito es: </strong> <?php echo $rdglenguaje ?>
 
