@@ -1,9 +1,12 @@
 <?php
 $txtNombre = "";
 $rdglenguaje = "";
+
 $chkphp = "";
 $chkhtml = "";
 $chkcss = "";
+
+$lsanime = "";
 
 if ($_POST) {
 
@@ -14,7 +17,7 @@ if ($_POST) {
     $chkhtml = (isset($_POST["chkhtml"]) == "si") ? "checked" : "";
     $chkcss = (isset($_POST["chkcss"]) == "si") ? "checked" : "";
 
-    print_r($rdglenguaje);
+    $lsanime = (isset($_POST["lsanime"])) ? $_POST["lsanime"] : "";
 }
 ?>
 
@@ -38,9 +41,7 @@ if ($_POST) {
 
         <input type="submit" value="Enviar Informacion"><br />
 
-        <?php if ($_POST) { ?>
-            <strong>Hola soy </strong> <?php echo $txtNombre; ?>
-        <?php } ?> <br>
+
 
         ¿Te gusta?<br>
         <br>php <input type="radio" <?php echo ($rdglenguaje == "php") ? "checked" : ""; ?> name="Lenguaje" value="php" id=""> <br />
@@ -48,15 +49,32 @@ if ($_POST) {
         <br>css <input type="radio" <?php echo ($rdglenguaje == "css") ? "checked" : ""; ?> name="Lenguaje" value="css" id=""><br />
 
         Estas aprendiendo...
-        <br />PHP<input type="checkbox"  <?php echo $chkphp; ?> name="chkphp" value="si" id="">
+        <br />PHP<input type="checkbox" <?php echo $chkphp; ?> name="chkphp" value="si" id="">
         <br />HTML<input type="checkbox" <?php echo $chkhtml; ?> name="chkhtml" value="si" id="">
-        <br />CSS<input type="checkbox" <?php echo $chkcss; ?> name="chkcss" value="si" id="">
-
-        <br /><strong>Tu lenguaje favorito es: </strong> <?php echo $rdglenguaje ?>
+        <br />CSS<input type="checkbox" <?php echo $chkcss; ?> name="chkcss" value="si" id=""><br>
 
 
 
+        Que anime te gusta?<br>
 
+        <select name="lsanime" id="">
+            <option value="Ningunad de las antreriores">Ningunad de las antreriores</option>
+            <option value="Naruto" <?php echo ($lsanime == "Naruto") ? "selected" : ""; ?>>Naruto</option>
+            <option value="dragon" <?php echo ($lsanime == "dragon") ? "selected" : ""; ?>>Dragon Ball</option>
+            <option value="one" <?php echo ($lsanime == "one") ? "selected" : ""; ?>>One Peace</option>
+
+        </select><br>
+        <input type="submit" value="Enviar informacion"><br>
+
+        <strong>Tu Nomre es </strong> <?php echo $txtNombre ?><br>
+        <strong>Te gusta Programar con </strong><br>
+        -<?php echo ($rdglenguaje == "php") ? "php" : ""; ?><br>
+        -<?php echo ($rdglenguaje == "html") ? "html" : ""; ?><br>
+        -<?php echo ($rdglenguaje == "css") ? "css" : ""; ?><br>
+        <strong>Estas aprendiendo </strong> <?php echo $rdglenguaje ?><br>
+        <strong>Tu Anime Favorito es </strong> <?php echo $lsanime ?><br>
+
+      
     </form>
 </body>
 
